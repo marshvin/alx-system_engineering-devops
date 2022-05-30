@@ -1,0 +1,2 @@
+#!/bin/bash
+cut -c1 | tr -d '\r\n' | cut -f1
