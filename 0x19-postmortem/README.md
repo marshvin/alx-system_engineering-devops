@@ -1,4 +1,5 @@
 #Issue Summary:
+
 ##Duration of Outage: 10:00 AM - 11:30 AM EST on February 5, 2023
 
 Impact: The website, which provides online shopping services, was down for 90 minutes, resulting in 100% of users unable to access the website and complete their transactions.
