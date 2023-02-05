@@ -1,8 +1,8 @@
-Issue Summary:
-Duration of Outage: 10:00 AM - 11:30 AM EST on February 5, 2023
+#Issue Summary:
+##Duration of Outage: 10:00 AM - 11:30 AM EST on February 5, 2023
 Impact: The website, which provides online shopping services, was down for 90 minutes, resulting in 100% of users unable to access the website and complete their transactions.
 Root Cause: The root cause of the outage was a software bug in the shopping cart module, which caused a database connection timeout and brought the entire website down.
-Timeline:
+##Timeline:
 10:00 AM - The issue was detected by the monitoring system, which sent out an alert.
 10:15 AM - The on-call engineer received the alert and investigated the issue, assuming it was a database connection problem.
 10:30 AM - The engineer tried restarting the database server and checking the logs, but these actions did not resolve the issue.
@@ -18,7 +18,7 @@ Conduct thorough testing of all code changes before deploying them to production
 Implement monitoring on the server memory and database connections to quickly detect and resolve any issues.
 Regularly review and update the software and systems to ensure that they are up-to-date and secure.
 Provide training for the on-call engineer and the development team to improve their incident response processes.
-Tasks:
+##Tasks:
 Patch the shopping cart module
 Implement monitoring on server memory
 Conduct regular code reviews and update systems
