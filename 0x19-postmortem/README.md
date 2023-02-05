@@ -1,5 +1,6 @@
 #Issue Summary:
 ##Duration of Outage: 10:00 AM - 11:30 AM EST on February 5, 2023
+
 Impact: The website, which provides online shopping services, was down for 90 minutes, resulting in 100% of users unable to access the website and complete their transactions.
 Root Cause: The root cause of the outage was a software bug in the shopping cart module, which caused a database connection timeout and brought the entire website down.
 ##Timeline:
