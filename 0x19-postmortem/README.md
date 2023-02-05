@@ -1,28 +1,17 @@
-#Issue Summary:
+# BooktifuL requests failure report
+Last week, it was reported that the BooktifuL platform was returning 500 Error on all requests made on the platform routes, all the services were down.  90% of the users were affected. The root cause was the failure of our master server web-01.
 
-##Duration of Outage: 10:00 AM - 11:30 AM EST on February 5, 2023
+## Timeline
+The error was realized on Saturday 26th February 1200 hours (East Africa Time) when our Site Reliability Engineer, Mr Elie saw the master server lagging in speed. Our engineers on call disconnected the master server web-01 for further system analysis and channelled all requests to client server web-02. They soled problem by Sunday 27th Febraury 2200 hours (East Africa Time).
 
-Impact: The website, which provides online shopping services, was down for 90 minutes, resulting in 100% of users unable to access the website and complete their transactions.
-Root Cause: The root cause of the outage was a software bug in the shopping cart module, which caused a database connection timeout and brought the entire website down.
-##Timeline:
-10:00 AM - The issue was detected by the monitoring system, which sent out an alert.
-10:15 AM - The on-call engineer received the alert and investigated the issue, assuming it was a database connection problem.
-10:30 AM - The engineer tried restarting the database server and checking the logs, but these actions did not resolve the issue.
-10:45 AM - The engineer escalated the issue to the development team, who assumed it was a software bug in the shopping cart module.
-11:00 AM - The development team found the root cause of the issue, a software bug in the shopping cart module, which was causing the database connection timeout.
-11:15 AM - The development team deployed a patch to fix the bug and tested the website.
-11:30 AM - The website was back up and running, and the issue was resolved.
-Root Cause and Resolution:
-The root cause of the issue was a software bug in the shopping cart module, which caused a database connection timeout and brought the entire website down. The bug was fixed by deploying a patch that corrected the incorrect code in the shopping cart module. The patch was thoroughly tested before being deployed, to ensure that the website would not go down again.
-Corrective and Preventive Measures:
-To prevent similar issues from happening in the future, the following corrective and preventive measures will be taken:
-Conduct thorough testing of all code changes before deploying them to production.
-Implement monitoring on the server memory and database connections to quickly detect and resolve any issues.
-Regularly review and update the software and systems to ensure that they are up-to-date and secure.
-Provide training for the on-call engineer and the development team to improve their incident response processes.
-##Tasks:
-Patch the shopping cart module
-Implement monitoring on server memory
-Conduct regular code reviews and update systems
-Provide incident response training to the on-call engineer and development team
+## Root cause and resolution
+The BooktifuL platform is served by 2 ubuntu cloud servers. The master server web-01 was connected to serve all requests, and it stopped functioning due to memory outage as a results of so many requests because during a previous test, the client server web-02 was disconnected temporarily for testing and was not connected to the load balancer afterwards. 
+
+
+The issue was fixed when the master server was temporarily disconnected for memory clean-up then connected back to the loadbalancer and round-robin algorithm was configured so that both the master and client servers can handle equal amount of requests.
+
+## Measures against such problem in future
+- Choose the best loadbalancing algorithm for your programs
+- Always keep an eye on your servers to ensure they are running properly
+- Have extra back-up servers to prevent your program fro completely going offline during an issue
 
