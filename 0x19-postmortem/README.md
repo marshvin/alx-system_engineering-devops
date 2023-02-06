@@ -17,13 +17,13 @@ Root Cause: The root cause of the outage was a software bug in the shopping cart
 The root cause of the issue was a software bug in the shopping cart module, which caused a database connection timeout and brought the entire website down. The bug was fixed by deploying a patch that corrected the incorrect code in the shopping cart module. The patch was thoroughly tested before being deployed, to ensure that the website would not go down again.
 
 ## Corrective and Preventive Measures
--Conduct thorough testing of all code changes before deploying them to production.
--Implement monitoring on the server memory and database connections to quickly detect and resolve any issues.
--Regularly review and update the software and systems to ensure that they are up-to-date and secure.
--Provide training for the on-call engineer and the development team to improve their incident response processes.
+<p>-Conduct thorough testing of all code changes before deploying them to production.</p>
+<p>-Implement monitoring on the server memory and database connections to quickly detect and resolve any issues.</p>
+<p>-Regularly review and update the software and systems to ensure that they are up-to-date and secure.</P>
+<p>-Provide training for the on-call engineer and the development team to improve their incident response processes.</p>
 
 ## Task
--Patch the shopping cart module
--Implement monitoring on server memory
--Conduct regular code reviews and update systems
--Provide incident response training to the on-call engineer and development team
+<p>-Patch the shopping cart module</p>
+<p>-Implement monitoring on server memory</p>
+<p>-Conduct regular code reviews and update systems</p>
+<p>-Provide incident response training to the on-call engineer and development team</p>
